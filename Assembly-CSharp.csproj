@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CD70681F-9B4B-133D-E5B8-7474D834DEB1}</ProjectGuid>
+    <ProjectGuid>{1D169DDE-8D48-78B1-49DE-1E5090D50A69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,11 +56,20 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MyGraph.cs" />
-    <Compile Include="Assets\Scripts\MyGraphEditor.cs" />
-    <Compile Include="Assets\Scripts\MyRoomsGenerator.cs" />
-    <Compile Include="Assets\Scripts\MyRoom.cs" />
-    <Compile Include="Assets\Scripts\MyOpenings.cs" />
+    <Compile Include="Assets\Scripts\MapGenerator\MyRoomsGenerator.cs" />
+    <Compile Include="Assets\Scripts\MapGenerator\MyGraphEditor.cs" />
+    <Compile Include="Assets\Scripts\MapGenerator\MyGraph.cs" />
+    <Compile Include="Assets\Scripts\Rooms\MyOpenings.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RoomZone.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Spawner\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RoomTypes\Room.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RoomTypes\MobRoom.cs" />
+    <Compile Include="Assets\Scripts\Rooms\RoomTypes\StandartRoom.cs" />
+    <Compile Include="Assets\Scripts\Mob\Mob.cs" />
+    <Compile Include="Assets\Scripts\Mob\MeleeMob.cs" />
+    <Compile Include="Assets\Scripts\Mob\RangeMob.cs" />
+    <Compile Include="Assets\Scripts\Spawner\MobContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -690,6 +699,9 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
@@ -722,9 +734,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
