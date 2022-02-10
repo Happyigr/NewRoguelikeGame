@@ -164,7 +164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -298,9 +298,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7273541566863302790
+--- !u!1001 &1855407755
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -309,15 +309,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 757333496853059722, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 757333496853059722, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 757333496853059722, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 757333496853059722, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -351,17 +351,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 817310169191535490, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384921248124014255, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384921248124014255, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
+    - target: {fileID: 5587477633148972304, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
+      propertyPath: _forcePower
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5997105970412356897, guid: ed213411e3b347b47903f7e0d950c76c, type: 3}
       propertyPath: m_Name
