@@ -8,10 +8,15 @@ public class Mob : MonoBehaviour
     private int _health;
 
     [SerializeField]
-    public int _damage;
+    private int _damage;
 
     [SerializeField]
     private int _fireRate; // bullets pro second
+
+    [SerializeField]
+    private Player _target;
+
+    public Player Target => _target;
 
     public void TakeDamage(int damage)
     {

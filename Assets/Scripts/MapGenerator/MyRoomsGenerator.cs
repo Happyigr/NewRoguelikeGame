@@ -5,10 +5,10 @@ using UnityEngine;
 public class MyRoomsGenerator : MonoBehaviour
 {
     [SerializeField]
-    private Room _startRoomPrefab;
+    private Room[] _roomPrefabs;
 
     [SerializeField]
-    private Room[] _roomPrefabs;
+    private Room _startRoomPrefab;
 
     [SerializeField]
     private Room _bossRoomPrefab;
@@ -17,14 +17,20 @@ public class MyRoomsGenerator : MonoBehaviour
     private Grid _mapHolder;
 
     [SerializeField]
-    private int _amountOfRooms;
+    private int _amountOfRooms; // boss room not included
+
+    [SerializeField]
+    private int _amountOfChestRooms;
+
+    [SerializeField]
+    private int _amountOfMobRooms;
 
     private void Start()
     {
-        StartCoroutine(Generate(_amountOfRooms));
+        Generate(_amountOfRooms);
     }
 
-    private IEnumerator Generate(int amount)
+    private void Generate(int amount)
     {
         MyGraph graph = new MyGraph();
         var nodeInfos = graph.Generate(amount);
@@ -44,8 +50,6 @@ public class MyRoomsGenerator : MonoBehaviour
                 room.Setup(nodeInfo.Dirs);
             }
         }
-
-        yield return 0;
     }
 
     private Room RandomRoomPrefab()

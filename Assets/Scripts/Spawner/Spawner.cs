@@ -18,8 +18,6 @@ public class Spawner : MonoBehaviour
 
     public void SpawnMobs()
     {
-        Debug.Log("Spawned");
-
         _container.gameObject.SetActive(true);
 
         var containerCoords = _container.GetComponent<Transform>().position;
