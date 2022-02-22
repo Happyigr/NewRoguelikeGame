@@ -5,6 +5,9 @@ using UnityEngine;
 public class Mob : MonoBehaviour
 {
     [SerializeField]
+    protected Weapon Weapon;
+
+    [SerializeField]
     private int _health;
 
     [SerializeField]
@@ -13,10 +16,13 @@ public class Mob : MonoBehaviour
     [SerializeField]
     private int _fireRate; // bullets pro second
 
-    [SerializeField]
+    public Player Target => _target;
     private Player _target;
 
-    public Player Target => _target;
+    public void Init(Player target)
+    {
+        _target = target;
+    }
 
     public void TakeDamage(int damage)
     {

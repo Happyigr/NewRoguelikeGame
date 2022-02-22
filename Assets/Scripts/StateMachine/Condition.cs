@@ -23,4 +23,9 @@ public abstract class Condition : MonoBehaviour
     {
         NeedTransit = false;
     }
+
+    private void OnDisable()
+    {
+        NeedTransit = false;
+    }
 }

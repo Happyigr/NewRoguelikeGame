@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{1D169DDE-8D48-78B1-49DE-1E5090D50A69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -59,22 +60,30 @@
     <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
     <Compile Include="Assets\Scripts\Mob\Mob.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraObserver.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\States\MeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\Rooms\RoomTypes\Room.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Weapons\LookAtCursor.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\Conditions\TargetDieCondition.cs" />
     <Compile Include="Assets\Scripts\Mob\MeleeMob.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMover.cs" />
     <Compile Include="Assets\Scripts\Mob\RangeMob.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Enums\WeaponType.cs" />
     <Compile Include="Assets\Scripts\StateMachine\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\States\MoveToTargetState.cs" />
     <Compile Include="Assets\Scripts\Rooms\RoomZone.cs" />
     <Compile Include="Assets\Scripts\Rooms\RoomTypes\StandartRoom.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\States\RandomMoveOrStayState.cs" />
     <Compile Include="Assets\Scripts\Spawner\Spawner.cs" />
     <Compile Include="Assets\Scripts\MapGenerator\MyRoomsGenerator.cs" />
     <Compile Include="Assets\Scripts\Weapons\RangeWeapon.cs" />
     <Compile Include="Assets\Scripts\StateMachine\Condition.cs" />
     <Compile Include="Assets\Scripts\Mob\MobInventory.cs" />
     <Compile Include="Assets\Scripts\MapGenerator\MyGraphEditor.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\Conditions\DistanceCondition.cs" />
     <Compile Include="Assets\Scripts\MapGenerator\MyGraph.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\States\RangeAttackState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\StateMachine\State.cs" />
     <Compile Include="Assets\Scripts\Rooms\RoomTypes\MobRoom.cs" />
@@ -83,14 +92,7 @@
     <Compile Include="Assets\Scripts\Inventories\Inventory.cs" />
     <Compile Include="Assets\Scripts\Rooms\RoomTypes\ChestRoom.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\States\RandomMove.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\States\MeleeAttack.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\States\RangeAttack.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\Conditions\DistanceCondition.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\Conditions\TargetDieCondition.cs" />
-    <Compile Include="Assets\Scripts\StateMachine\States\MoveToTargetState.cs" />
-    <Compile Include="Assets\Scripts\Enums\WeaponType.cs" />
-    <Compile Include="Assets\Scripts\Weapons\LookAtCursor.cs" />
+    <Compile Include="Assets\Scripts\StateMachine\Conditions\TimeCondition.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

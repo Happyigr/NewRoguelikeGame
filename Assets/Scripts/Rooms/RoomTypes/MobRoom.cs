@@ -22,6 +22,11 @@ public class MobRoom : Room
         _roomZone.IsEntered -= OnRoomEntered;
     }
 
+    public void Init(Player target)
+    {
+        _spawner.Init(target);
+    }
+
     public void OnRoomEntered()
     {
         StartRoom();

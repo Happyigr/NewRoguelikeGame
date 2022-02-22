@@ -4,26 +4,14 @@ using UnityEngine;
 
 public class MyRoomsGenerator : MonoBehaviour
 {
-    [SerializeField]
-    private Room[] _roomPrefabs;
-
-    [SerializeField]
-    private Room _startRoomPrefab;
-
-    [SerializeField]
-    private Room _bossRoomPrefab;
-
-    [SerializeField]
-    private Grid _mapHolder;
-
-    [SerializeField]
-    private int _amountOfRooms; // boss room not included
-
-    [SerializeField]
-    private int _amountOfChestRooms;
-
-    [SerializeField]
-    private int _amountOfMobRooms;
+    [SerializeField] private Player _player;
+    [SerializeField] private Room[] _roomPrefabs;
+    [SerializeField] private Room _startRoomPrefab;
+    [SerializeField] private Room _bossRoomPrefab;
+    [SerializeField] private Grid _mapHolder;
+    [SerializeField] private int _amountOfRooms; // boss room not included
+    [SerializeField] private int _amountOfChestRooms;
+    [SerializeField] private int _amountOfMobRooms;
 
     private void Start()
     {
@@ -48,6 +36,10 @@ public class MyRoomsGenerator : MonoBehaviour
             {
                 var room = Instantiate(RandomRoomPrefab(), new Vector3(nodeInfo.Pos.x, nodeInfo.Pos.y, 0) * RandomRoomPrefab().GetRoomSize(), Quaternion.identity, _mapHolder.GetComponent<Transform>());
                 room.Setup(nodeInfo.Dirs);
+                if (room.TryGetComponent(out MobRoom mobRoom))
+                {
+                    mobRoom.Init(_player);
+                }
             }
         }
     }
