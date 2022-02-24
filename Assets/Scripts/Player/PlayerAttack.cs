@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField]
     private Weapon _activeWeapon;
+    private Weapon _secondaryWeapon;
 
     private void Update()
     {
@@ -15,6 +15,18 @@ public class PlayerAttack : MonoBehaviour
             {
                 _activeWeapon.Attack();
             }
+
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                ChangeWeapon();
+            }
         }
+    }
+
+    public void ChangeWeapon()
+    { 
+        var weapon = _activeWeapon;
+        _activeWeapon = _secondaryWeapon;
+        _secondaryWeapon = weapon;
     }
 }

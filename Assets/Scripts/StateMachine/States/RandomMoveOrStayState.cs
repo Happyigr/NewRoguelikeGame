@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class RandomMoveOrStayState : State
 {
     [SerializeField] private float _forcePower;
@@ -9,13 +10,10 @@ public class RandomMoveOrStayState : State
     private Vector2 _moveDirection;
     private Rigidbody2D _rb;
 
-    private void Start()
-    {
-        _rb = GetComponent<Rigidbody2D>();
-    }
-
     private void OnEnable()
     {
+        _rb = GetComponent<Rigidbody2D>();
+
         if (Random.Range(0, 2) == 1)
             _moveDirection = new Vector2(0, 0);
         else

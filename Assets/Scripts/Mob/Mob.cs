@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    [SerializeField]
-    protected Weapon Weapon;
-
-    [SerializeField]
-    private int _health;
-
-    [SerializeField]
-    private int _damage;
-
-    [SerializeField]
-    private int _fireRate; // bullets pro second
+    [SerializeField] protected Weapon ActiveWeapon;
+    [SerializeField] private int _health;
 
     public Player Target => _target;
     private Player _target;
@@ -24,9 +15,13 @@ public class Mob : MonoBehaviour
         _target = target;
     }
 
+    public void GiveWeapon(Weapon weapon)
+    {
+        ActiveWeapon = weapon;
+    }
+
     public void TakeDamage(int damage)
     {
-        Debug.Log("is hurted");
         _health -= damage;
         if (_health <= 0)
         {
@@ -36,6 +31,6 @@ public class Mob : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("is died");
+        Destroy(gameObject);
     }
 }

@@ -14,18 +14,16 @@ public abstract class Condition : MonoBehaviour
 
     public bool NeedTransit { get; protected set; }
 
-    public void Init(Player target)
+    public void Enter(Player target)
     {
         Target = target;
+        NeedTransit = false;
+        enabled = true;
     }
 
-    private void OnEnable()
+    public void Exit()
     {
         NeedTransit = false;
-    }
-
-    private void OnDisable()
-    {
-        NeedTransit = false;
+        enabled = false;
     }
 }

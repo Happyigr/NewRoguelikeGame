@@ -14,7 +14,6 @@ public class TimeCondition : Condition
     private IEnumerator WaitForTime(float time)
     {
         yield return new WaitForSecondsRealtime(time);
-        Debug.Log('a');
         NeedTransit = true;
     }
 

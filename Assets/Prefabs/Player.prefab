@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5249170033232122740}
   - component: {fileID: 3192023223814509864}
   - component: {fileID: 5525223961346910317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 7dcb74e8f0a87f34287169b5da1f5036, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.042465687, y: 0.492602}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainCamera: {fileID: 0}
   _weapon: {fileID: 6606879315298446372}
-  _forcePower: 20
+  _forcePower: 50
 --- !u!1001 &6023480484581821756
 PrefabInstance:
   m_ObjectHideFlags: 0

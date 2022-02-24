@@ -17,8 +17,7 @@ public abstract class State : MonoBehaviour
             enabled = true;
             foreach (var condition in _conditions)
             {
-                condition.enabled = true;
-                condition.Init(Target);
+                condition.Enter(Target);
             }
         }
     }
@@ -29,13 +28,11 @@ public abstract class State : MonoBehaviour
         {
             foreach (var con in _conditions)
             {
-                con.enabled = false;
+                con.Exit();
             }
 
             enabled = false;
         }
-
-        
     }
 
     public State GetNextState()
